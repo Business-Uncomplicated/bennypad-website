@@ -4,7 +4,7 @@
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "build": "cross-env NODE_ENV=production eleventy && cross-env NODE_ENV=production",
-    "browsersync": "browser-sync start --server _site --files _site --port 8080 --no-notify --no-open"
+    "browsersync": "browser-sync start --server _site --files _site --port 8000 --no-notify --no-open"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
