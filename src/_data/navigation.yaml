@@ -1,0 +1,10 @@
+---
+items:
+  - text: Menu One
+    url: "#"
+  - text: Menu Two
+    url: "#"
+  - text: Categories
+    url: "/categories"
+  - text: Blog
+    url: "/blog"
