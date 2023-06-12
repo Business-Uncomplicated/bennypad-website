@@ -3,6 +3,10 @@
 @import 'variables';
 @import 'navigation';
 
+body {
+    font-family: $main-font, "Apple Color Emoji";
+}
+
 :root {
     // --color-canvas-default-transparent: rgba(255, 255, 255, 0);
     // --color-page-header-bg: #f6f8fa;

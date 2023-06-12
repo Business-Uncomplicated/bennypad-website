@@ -1,10 +1,10 @@
 backend:
   # Use netlify identity as backend
-  # name: git-gateway
-  # branch: master
+  name: git-gateway
+  branch: master
   ### enable below lines for github integration ###
-  name: github
-  repo: Business-Uncomplicated/bennypad-website
+  # name: github
+  # repo: Business-Uncomplicated/bennypad-website
 media_folder: "src/static/img"
 public_folder: "/static/img"
 
@@ -12,40 +12,53 @@ public_folder: "/static/img"
 local_backend: true
 # publish_mode: editorial_workflow
 collections:
-  - label: "Products"
-    name: "products"
-    folder: "src/products"
+  - label: "Pages"
+    name: "pages"
+    folder: "src/pages"
+    create: true
+    editor:
+      preview: true
+    fields:
+      - label: "SEO"
+        name: "seo"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Url", name: "url", widget: "string" }
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "Image", name: "image", widget: "image" }
+      - label: "Sections"
+        name: "sections" 
+        widget: "list"
+        fields: 
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - { label: "File", name: "file", widget: "file" }
+          - { label: "Columns", name: "columns", widget: "boolean"}
+      
+  - label: "Projects"
+    name: "projects"
+    folder: "src/projects"
     create: true
     editor:
       preview: false
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
-      - { label: "Image", name: "image", widget: "image", required: false }
-      - { label: "Size options", name: "sizes", field: {name: "size", widget: "string"}, widget: "list" }
-      - { label: "Thickness options", name: "thicknesses", widget: "list", field: {name: "thickness", widget: "string"}, required: false }
-      - { label: "Finish options", name: "finishes", widget: "list", field: {name: "finish", widget: "string"},required: false }
-      - widget: select
-        label: "categories"
-        name: "categories"
-        multiple: true
-        create: true
-        options: ["Sandwich boards", "Window stickers"]
-  - label: "Categories"
-    name: "categories"
-    folder: "src/categories"
-    create: true
-    editor:
-      preview: false
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Main thing", name: "video", widget: "file" }
       - widget: select
         label: "tags"
         name: "tags"
         multiple: true
         create: true
-        options: ["Tags", "from", "config.yml"]
+        options: ["Design", "Research"]
   - label: "Settings"
     name: "settings"
     editor:
