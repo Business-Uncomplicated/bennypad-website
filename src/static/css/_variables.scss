@@ -1,0 +1,19 @@
+$serif: 'Source Sans Pro', sans-serif;
+$sans-serif: 'Poppins', sans-serif;
+$timeline: #e86acc;
+
+$pink: #F570A0;
+$pink-light: lighten($pink, 20);
+$pink-lightest: lighten($pink, 23);
+$violet: #7C44B3;
+
+$pink-white-gradient: linear-gradient(150deg, rgba(white, 1) 20%, rgba($pink, 0.4) 100%);
+$pink-white-gradient-45: linear-gradient(211deg, rgba(white, 1) 20%, rgba($pink, 0.4) 100%);
+$pink-gradient: linear-gradient(90deg, $pink 30%, lighten($pink, 20) 90%);
+$pink-gradient45: linear-gradient(135deg, $pink 30%, lighten($pink, 20) 90%);
+
+$black: #212227;
+$dark-grey: #6a6e74;
+$grey: #9197A1;
+$light-grey: #C8CBD0;
+$lightest-grey: #f1f5fa;

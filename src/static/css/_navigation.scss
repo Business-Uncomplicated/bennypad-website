@@ -1,0 +1,46 @@
+@import 'variables';
+
+// TOP NAVIGATION
+
+.Header {
+    position: sticky;
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    top: -80px;
+    transition: all .2s;
+    height: 80px;
+
+    &.in_focus {
+        top: 0;
+    }
+
+    &.sticking {
+        box-shadow: inset 0px -1px 0 rgba(black, 0.2);
+        background: rgba(white, 0.8);
+        top: 0;
+    }
+}
+
+.Header-menu {
+    @include breakpoint(dm) {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+.Header--open {
+    background: white;
+    z-index: 999999;
+    max-width: unset;
+    text-align: center;
+    overflow-x: hidden;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+
+    .Header-menu {
+        height: auto;
+        margin-top: 100px;
+    }
+}
